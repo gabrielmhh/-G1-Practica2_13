@@ -3,76 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <title>Preguntas frecuentes - MayaCode</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>MayaCode</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="producto.html">Producto</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="carrito.html">Carrito</a></li>
-            </ul>
-        </nav>
+    <header class="mb-4">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-between align-items-center py-2">
+                <h1 class="mb-0">MayaCode</h1>
+                <nav>
+                    <ul class="nav">
+                        <li class="nav-item"><a class="nav-link text-white" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="producto.html">Producto</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="faq.html">FAQ</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="contacto.html">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="carrito.html">Carrito</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
     <main>
-        <h2>Preguntas frecuentes</h2>
-        <div class="faq-item">
+        <section class="container my-4">
+            <h2 class="mb-4">Preguntas frecuentes</h2>
+            <div class="faq-item">
             <button class="faq-question">¿Qué diferencia tiene el café soluble MayaCode respecto a otros cafés solubles?</button>
             <div class="faq-answer">
                 <p>Nuestro café soluble se produce a partir de granos de café de origen guatemalteco seleccionados y tostados artesanalmente. Para más detalles sobre el producto, visite la <a href="producto.html">página del producto</a>.</p>
             </div>
         </div>
-        <div class="faq-item">
+            <div class="faq-item">
             <button class="faq-question">¿Cómo puedo realizar un pedido?</button>
             <div class="faq-answer">
                 <p>Seleccione el producto en la <a href="producto.html">página del producto</a>, añádalo al carrito y siga las instrucciones para completar la compra en el <a href="carrito.html">carrito</a>.</p>
             </div>
         </div>
-        <div class="faq-item">
+            <div class="faq-item">
             <button class="faq-question">¿Qué métodos de pago aceptan?</button>
             <div class="faq-answer">
                 <p>Actualmente ofrecemos un proceso de pago simulado para prácticas académicas. En versiones futuras se integrará una pasarela de pagos segura. Puede ver el proceso en el <a href="carrito.html">carrito</a>.</p>
             </div>
         </div>
-        <div class="faq-item">
+            <div class="faq-item">
             <button class="faq-question">¿Hacen entregas a todo el país?</button>
             <div class="faq-answer">
                 <p>Sí, ofrecemos entregas a nivel nacional a través de servicios de mensajería. Consulte la información de envío al final del proceso de compra en el <a href="carrito.html">carrito</a>.</p>
             </div>
         </div>
-        <div class="faq-item">
+            <div class="faq-item">
             <button class="faq-question">¿Puedo personalizar el grado de tostado o molienda?</button>
             <div class="faq-answer">
                 <p>Para pedidos de café en grano con tostado personalizado, visite nuestra sección de <a href="producto.html">preparación en grano</a> o póngase en contacto con nosotros mediante el <a href="contacto.html">formulario de contacto</a>.</p>
             </div>
         </div>
-        <div class="faq-item">
+            <div class="faq-item">
             <button class="faq-question">¿Cuál es la política de devoluciones?</button>
             <div class="faq-answer">
                 <p>Si no está satisfecho con su compra, contáctenos a través del <a href="contacto.html">formulario de contacto</a>. Atenderemos su solicitud y haremos lo posible por resolver cualquier inconveniente.</p>
             </div>
         </div>
-        <div class="faq-item">
+            <div class="faq-item">
             <button class="faq-question">¿Cómo sé la fecha de producción y lote?</button>
             <div class="faq-answer">
                 <p>La fecha de producción y el lote se indican en la ficha del producto. Puede consultarlos en la <a href="producto.html">página del producto</a>.</p>
             </div>
         </div>
-        <div class="faq-item">
+            <div class="faq-item">
             <button class="faq-question">¿Ofrecen descuentos por compras al por mayor?</button>
             <div class="faq-answer">
                 <p>Para compras en grandes cantidades, póngase en contacto mediante el <a href="contacto.html">formulario de contacto</a> y le proporcionaremos una cotización personalizada.</p>
             </div>
         </div>
 
+        </section>
     </main>
-    <footer>
-        <p>&copy; 2025 MayaCode. Todos los derechos reservados.</p>
+    <footer class="mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 MayaCode. Todos los derechos reservados.</p>
+        </div>
     </footer>
+    <!-- Bootstrap JS (opcional, para componentes interactivos) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
     // Script acordeón para FAQ
     document.querySelectorAll('.faq-question').forEach(function(btn) {
