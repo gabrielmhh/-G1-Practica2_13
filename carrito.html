@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Carrito de compras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>MayaCode</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="producto.html">Producto</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Carrito de compras</h2>
+        <div id="cart-contents"></div>
+        <p id="total"></p>
+        <button id="checkout" class="btn">Proceder al pago (simulado)</button>
+    </main>
+    <footer>
+        <p>&copy; 2025 MayaCode. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        function renderCart() {
+            let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+            let container = document.getElementById('cart-contents');
+            container.innerHTML = '';
+            let total = 0;
+            if (cart.length === 0) {
+                container.innerHTML = '<p>El carrito está vacío.</p>';
+            } else {
+                let ul = document.createElement('ul');
+                cart.forEach(function(item) {
+                    let li = document.createElement('li');
+                    li.textContent = item.nombre + ' - Q' + item.precio.toFixed(2) + ' x ' + item.cantidad;
+                    ul.appendChild(li);
+                    total += item.precio * item.cantidad;
+                });
+                container.appendChild(ul);
+            }
+            document.getElementById('total').textContent = 'Total: Q' + total.toFixed(2);
+        }
+        document.getElementById('checkout').addEventListener('click', function() {
+            alert('Pago simulado. Gracias por su compra.');
+            localStorage.removeItem('cart');
+            renderCart();
+        });
+        renderCart();
+    </script>
+</body>
+</html>

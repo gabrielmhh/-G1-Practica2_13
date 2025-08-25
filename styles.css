@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+header {
+    background-color: #3e2723;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+.hero {
+    display: flex;
+    align-items: center;
+    background-color: #efebe9;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.hero img {
+    max-width: 300px;
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+}
+.hero-text {
+    max-width: 600px;
+}
+.btn {
+    display: inline-block;
+    background-color: #795548;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #5d4037;
+}
+.about {
+    padding: 20px;
+    background-color: #ffffff;
+    margin: 20px;
+    border-radius: 5px;
+}
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    margin: 20px;
+    border-radius: 5px;
+}
+.product-container img {
+    max-width: 300px;
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+}
+.product-details {
+    max-width: 500px;
+}
+.product-details .price {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+footer {
+    background-color: #3e2723;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    margin: 20px;
+    border-radius: 5px;
+}
+form input, form textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+form button {
+    align-self: flex-start;
+    background-color: #795548;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+form button:hover {
+    background-color: #5d4037;
+}
+.faq-item {
+    background-color: #ffffff;
+    margin: 15px 20px;
+    padding: 15px;
+    border-radius: 5px;
+}
+.faq-item h3 {
+    margin-top: 0;
+}

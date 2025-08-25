@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Producto - Café Soluble MayaCode</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>MayaCode</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="producto.html">Producto</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Café Soluble MayaCode</h2>
+        <div class="product-container">
+            <img src="coffee.jpg" alt="Café Soluble MayaCode">
+            <div class="product-details">
+                <p>Nuestro café soluble está elaborado a partir de granos seleccionados de origen guatemalteco. Se presenta en envases de 200&nbsp;g herméticamente sellados para preservar su aroma y frescura.</p>
+                <ul>
+                    <li><strong>Origen:</strong> Altiplano de Guatemala</li>
+                    <li><strong>Presentación:</strong> Frasco de vidrio de 200&nbsp;g</li>
+                    <li><strong>Lote:</strong> 2025-01</li>
+                </ul>
+                <p class="price">Precio: Q90.00</p>
+                <button id="add-to-cart" class="btn">Añadir al carrito</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 MayaCode. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        document.getElementById('add-to-cart').addEventListener('click', function() {
+            let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+            cart.push({nombre:'Café Soluble MayaCode', precio:90.00, cantidad:1});
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Producto añadido al carrito');
+        });
+    </script>
+</body>
+</html>
